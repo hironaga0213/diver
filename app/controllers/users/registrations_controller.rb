@@ -21,6 +21,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create_profile
     @user = User.new(session["devise.regist_data"]["user"])
     @profile = Profile.new(profile_params)
+    binding.pry
      unless @profile.valid?
        render :new_profile and return
      end
@@ -34,7 +35,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
  
   def profile_params
-    params.require(:profile).permit(:prefecture_id, :license_id, :career_id, :introduction)
+    params.require(:profile).permit(:license_id, :career_id, :prefecture_id, :holiday_id, :marriage_id, :favorite_diving_id, :favorite_fish_id, :favorite_place_id, :favorite_sea_id, :introduction)
   end
 
   # GET /resource/sign_up
