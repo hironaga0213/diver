@@ -1,0 +1,26 @@
+.side-bar {
+  height: 100%;
+  width: 25%;
+  background:rgba(255,255,255,0);
+}
+
+.side-bar-header {
+  height: 15vh;
+  width: 100%;
+  background:rgba(255,255,255,0);
+}
+
+.menu {
+  height: calc(100% - 100px);
+  width: 100%;
+}
+
+.index {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.index a {
+  text-decoration: none;
+  color: white;
+}

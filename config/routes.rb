@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     get 'profiles', to: 'users/registrations#new_profile'
     post 'profiles', to: 'users/registrations#create_profile'
   end
-
+  root to: 'tops#index'
+  resources :tops, only: :index
 end

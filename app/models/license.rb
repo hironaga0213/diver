@@ -7,7 +7,7 @@ class License < ActiveHash::Base
     {id: 5, name: 'RED'},
     {id: 6, name: 'MSD'},
     {id: 7, name: 'OWSI'},
-    {id: 7, name: 'インストラクター(実務経験あり)'}
+    {id: 8, name: 'インストラクター(実務経験あり)'}
   ]
   include ActiveHash::Associations
   has_many :profiles

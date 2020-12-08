@@ -1,0 +1,58 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: image-url('background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+.wrapper-topics {
+  height: 100vh;
+  width: 100vw;
+  background-image: image-url('background.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+.main-page {
+  height: 100%;
+  width: 50%;
+}
+
+.main-header {
+  height: 15vh;
+  width: 100%;
+  background:rgba(255,255,255,0);
+}
+
+.main-contents {
+  height: calc(100% - 100px);
+  width: 100%;
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}
+
+.detail {
+  height: 100%;
+  width: 25%;
+  background:rgba(0,255,0,0.5);
+}
+
+.detail-top {
+  height: 15vh;
+  width: 100%;
+  background:rgba(255,255,255,0);
+}
+
+.detail-contents {
+  height: calc(100% - 100px);
+  width: 100%;
+}
