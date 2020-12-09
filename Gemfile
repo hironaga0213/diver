@@ -60,3 +60,7 @@ gem 'ransack'
 
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+gem 'jquery-rails'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
