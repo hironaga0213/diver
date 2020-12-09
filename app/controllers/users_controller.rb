@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit]
-  # before_action :search_user, only: [:index, :search]
+  before_action :search_user, only: [:index, :search]
   
 
   def index
@@ -19,9 +19,9 @@ class UsersController < ApplicationController
   #   @profile = @user.profile
   # end
 
-  # def search
-  #   @results = @p.result
-  # end
+  def search
+    @results = @p.result
+  end
 
   private
 
@@ -29,9 +29,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  # def search_user
-  #   @p = Profile.ransack(params[:q])
-  # end
+  def search_user
+    @p = Profile.ransack(params[:q])
+  end
 
   def recommend_user
     all_user = Profile.where.not(user_id: current_user.id)

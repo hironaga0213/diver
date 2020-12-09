@@ -18,8 +18,8 @@
   <div class="main-page">
     <div class="main-header">
     </div>
-    <%# <%= render "search_user" %> %>
-
+    <%= render "search_user" %>
+    
     <div class="topics-main">
       <% @users.each do |user| %>
         <%= render partial: "user_main", locals: { user: user} %>
