@@ -1,0 +1,19 @@
+<h1>
+  商品検索
+</h1>
+<%= search_form_for @p, url: search_users_path do |f| %>
+  <%= f.label :license_id_eq, 'ライセンス：' %>
+  <%= f.collection_select :license_id_eq, License.where.not(id: 1), :id, :name,  include_blank: '指定なし' %>
+  <br>
+  <%= f.label :career_id_eq, '経験本数　：' %>
+  <%= f.collection_select :career_id_eq, Career.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+  <br>
+  <%= f.label :prefecture_id_eq, '居住地　　：' %>
+  <%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+  <br>
+  <%= f.submit '検索' %>
+  <br>
+
+<% end %>
+
+        <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
