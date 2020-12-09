@@ -3,6 +3,7 @@ class Profile < ApplicationRecord
   belongs_to :prefecture
   belongs_to :license
   belongs_to :career
+  belongs_to :holiday
   belongs_to :marriage
   belongs_to :favorite_diving
   belongs_to :favorite_fish
