@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   def show
     @profile = @user.profile
-    @topics = @user.topics
+    # @topics = @user.topics
   end
 
   # def edit

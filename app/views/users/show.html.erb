@@ -1,7 +1,6 @@
 <%= render "shared/header" %>
 
 <div class="wrapper">
-  <%= render "shared/side_bar" %>
   <div class="main-page">
     <div class="main-header">
     </div>
@@ -27,8 +26,32 @@
                 <td class="table__col2"><%= @profile.career.name %></td> 
               </tr>
               <tr>
-                <th class="table__col1">居住地</th>
+                <th class="table__col1">お住まい</th>
                 <td class="table__col2"><%= @profile.prefecture.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">休日</th>
+                <td class="table__col2"><%= @profile.holiday.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">結婚</th>
+                <td class="table__col2"><%= @profile.marriage.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">ビーチorボート</th>
+                <td class="table__col2"><%= @profile.favorite_diving.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">好きな海洋生物</th>
+                <td class="table__col2"><%= @profile.favorite_fish.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">好きなスポット</th>
+                <td class="table__col2"><%= @profile.favorite_place.name %></td>
+              </tr>
+              <tr>
+                <th class="table__col1">どんな海が好き？</th>
+                <td class="table__col2"><%= @profile.favorite_sea.name %></td>
               </tr>
               <tr>
                 <th class="table__col1">自己紹介</th>
@@ -58,13 +81,13 @@
     </div>
     <div class="detail-contents-top">
       <h2 class="page-heading">
-        <%= "#{current_user.nickname}さんの投稿一覧"%>
+        <%= "#{@user.nickname}さんの投稿一覧"%>
       </h2>
     </div>
     <div class="detail-contents">
-      <% @topics.each do |topic| %>
-        <%= render partial: "user_topic", locals: { topic: topic } %>
-      <% end %>
+      <%# <% @topics.each do |topic| %>
+        <%# <%= render partial: "user_topic", locals: { topic: topic } %>
+      <%# <% end %>
     </div>
   </div>
 </div>
