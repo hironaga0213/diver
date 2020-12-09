@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+
+<div class="wrapper">
+  <%= render "shared/side_bar" %>
+  <div class="main-page">
+    <div class="main-header">
+    </div>
+    <div class="topics-main">
+      <div class="card">
+        <%= link_to image_tag(@topic.image, class: :card__img ), "#", method: :get %>
+        <div class="card__body">
+          <%= link_to @topic.title, "#", method: :get, class: :card__title%>
+          <p class="card__summary">
+            <%= @topic.place %>
+          </p>
+          <p class="card__summary">
+            <%= @topic.impression %>
+          </p>
+          <%= link_to "by #{@topic.user.nickname}", "#", class: :card__user %>
+        </div>
+        <div id="show_like_<%= @topic.id %>">
+          <%= render 'likes/like', topic: @topic %>
+        </div>
+      </div>
+    </div>
+    <% if user_signed_in? %>
+      <% if @topic.user_id == current_user.id %>
+        <%= link_to '編集', edit_topic_path, method: :get, class: "item-red-btn" %>
+        <p class='or-text'>or</p>
+        <%= link_to '削除', topic_path(@topic.id), method: :delete, class:'item-destroy' %>
+      <% end %>
+    <% end %>
+  </div>
+  <%= render "tops/detail_page" %>
+  <%#= render "topic_show" %>
+</div>
+
+<%= render "shared/footer" %>

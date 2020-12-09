@@ -1,0 +1,18 @@
+<div class="card">
+  <%= link_to image_tag(topic.image, class: :card__img ), topic_path(topic.id), method: :get %>
+  <div class="card__body">
+    <%= link_to "タイトル：#{topic.title}", topic_path(topic.id), method: :get, class: :card__title%>
+    
+    <p class="card__summary">
+      <%= "場所：#{topic.place}" %>
+    </p>
+    <p class="card__summary">
+      <%= topic.impression %>
+    </p>
+    <%= link_to "by #{topic.user.nickname}", user_path(topic.user.id), class: :card__user %>
+    <div id="index_like_<%= topic.id %>">
+      <%= render 'likes/like', topic: topic %>
+    </div>
+    <%#= @likes_count %>
+  </div>
+</div>
