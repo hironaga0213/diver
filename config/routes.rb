@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   end
   root to: 'tops#index'
   resources :tops, only: :index
+  resources :users, only: [:index, :show, :edit] do
+    resources :profile, only: [:edit, :update]
+    collection do
+      get 'search'
+    end
+  end
 end

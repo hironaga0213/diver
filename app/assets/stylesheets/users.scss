@@ -1,0 +1,120 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Place all the styles related to the topics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.topics-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.card {
+  width: calc((75% - 25px) / 3);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.card__body {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  background:rgba(255,255,255,0.7);
+  border: double 5px #4ec4d3;
+}
+
+.card__body p {
+  margin: 0; 
+  padding: 0;
+}
+
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.card__summary {
+  font-size: 16px;
+}
+.card__summary-2 {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.card-re {
+  width: 25%;
+}
+
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.field{
+  margin: 10px 0;
+}
+
+.actions{
+  margin-bottom: 40px;
+}
+
+.user__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 70%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background:rgba(255,255,255,0.7);
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 40%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  background:rgba(255,255,255,0.7);
+  width: 60%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-contents-top {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+}
+
+.user_rec {
+  width: calc(100% - 10px);
+  margin-bottom: 40px;
+}
+
+.user_rec_body {
+  background-color: white;
+}
