@@ -27,6 +27,11 @@
   width: 100%;
 }
 
+.user_rec {
+  width: calc(100% - 10px);
+  margin-bottom: 40px;
+}
+
 .card__body {
   padding: 0.5em 1em;
   margin: 2em 0;

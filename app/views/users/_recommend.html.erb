@@ -1,22 +1,25 @@
 <div class="user_rec">
   <%#= link_to image_tag(topic.image, class: :card__img ), topic_path(topic.id), method: :get %>
-  <div class="user_rec_body">
+  <div class="card__body">
     <p class="card__summary">
       <%= "ニックネーム：" %>
       <%= link_to recommend.user.nickname %>
     </p>
-
     <p class="card__summary">
       <%= "ライセンス：#{recommend.license.name}" %>
     </p>
+
     <p class="card__summary">
-      <%= "経験本数：#{recommend.career.name}" %>
+      <%= "お住まい　：#{recommend.prefecture.name}" %>
     </p>
     <p class="card__summary">
-      <%= "居住地：#{recommend.prefecture.name}" %>
+      <%= "ビーチorボート：#{recommend.favorite_diving.name}" %>
     </p>
     <p class="card__summary">
-      <%= "自己紹介：#{recommend.introduction}" %>
+      <%= "好きな海洋生物：#{recommend.favorite_fish.name}" %>
+    </p>
+    <p class="card__summary">
+      <%= "好きなスポット：#{recommend.favorite_place.name}" %>
     </p>
   </div>
 </div>

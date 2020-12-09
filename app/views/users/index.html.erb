@@ -8,13 +8,12 @@
       <div class="detail-contents-top">
         <%= "あなたへのおすすめユーザー" %>
       </div>
-      <%# <div class="detail-contents-recommend">
+      <div class="detail-contents-recommend">
         <% @recommend.each do |recommend|%>
-          <%# <%= render partial: "recommend", locals: {recommend: recommend} %>
-        <%# <% end %> 
-      <%# </div> %>
+          <%= render partial: "recommend", locals: {recommend: recommend} %>
+        <% end %> 
+      </div>
     </div>
-
   </div>
   <div class="main-page">
     <div class="main-header">
