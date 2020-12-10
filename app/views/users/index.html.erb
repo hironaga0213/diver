@@ -1,25 +1,30 @@
 <%= render "shared/header" %>
 
 <div class="wrapper-topics">
-  <div class="detail">
-    <div class="detail-top">
+
+  <div class="side-bar-topic">
+    <div class="side-bar-header">
     </div>
-    <div class="detail-contents">
-      <div class="detail-contents-top">
-        <%= "あなたへのおすすめユーザー" %>
+    <div class="side-main-back-user">
+      <div class="side-bar-title">
+        <h2 class="title-char-user">
+          あなたにおすすめのユーザー
+        </h2>
       </div>
-      <div class="detail-contents-recommend">
+      <div class="side-bar-user-main">
         <% @recommend.each do |recommend|%>
           <%= render partial: "recommend", locals: {recommend: recommend} %>
         <% end %> 
       </div>
     </div>
   </div>
+
   <div class="main-page">
     <div class="main-header">
     </div>
-    <%= render "search_user" %>
-    
+    <div class="search-box">
+      <%= render "search_user" %>
+    </div>
     <div class="topics-main">
       <% @users.each do |user| %>
         <%= render partial: "user_main", locals: { user: user} %>

@@ -1,15 +1,30 @@
 <%= render "shared/header" %>
 
 <div class="wrapper">
-  <%= render "shared/side_bar" %>
+  <div class="side-bar">
+    <div class="side-bar-header">
+    </div>
+    <div class="side-main-room">
+      <div class="side-bar-room-title">
+        <%= link_to(new_room_path, class: 'create-room-btn') do %>
+        <h2 class="title-char-create-room">
+          ルーム作成
+        </h2>
+        <% end %>
+      </div>
+      <div class="side-bar-title">
+        <h2 class="title-char-room-index">
+          チャットルーム一覧
+        </h2>
+      </div>
+      <div class="rooms">
+        <%= render "rooms/room_index"%>
+      </div>
+    </div>
+  </div>
   <div class="main-page">
     <div class="main-header">
     </div>
-  </div>
-  <div class="detail">
-    <div class="detail-top">
-    </div>
-    
     <div class="chat-header">
       <div class="left-header">
         <div class="header-title">
