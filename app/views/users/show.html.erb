@@ -1,10 +1,22 @@
 <%= render "shared/header" %>
 
 <div class="wrapper">
+  <div class="side-bar-topic">
+    <div class="side-bar-header">
+    </div>
+    <div class="side-main-back-user-show">
+      <div class="side-bar-title">
+        <h2 class="title-char-user">
+        </h2>
+      </div>
+      <div class="side-bar-user-main">
+      </div>
+    </div>
+  </div>
+
   <div class="main-page">
     <div class="main-header">
     </div>
-
     <div class="main">
       <div class="inner">
         <div class="user__wrapper">
@@ -59,9 +71,6 @@
               </tr>
             </tbody>
           </table>
-          <h2 class="page-heading">
-            <%= "#{current_user.nickname}さんの投稿一覧"%>
-          </h2>
           <div class="user__card">
             <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
             <%# <%= render partial: "prototypes/prototype", collection: @prototypes %>
@@ -76,20 +85,20 @@
     </div>
 
   </div>
-  <div class="detail">
-    <div class="detail-top">
-    </div>
-    <div class="detail-contents-top">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの投稿一覧"%>
-      </h2>
-    </div>
-    <div class="detail-contents">
+  <%# <div class="detail"> %>
+    <%# <div class="detail-top"> %>
+    <%# </div> %>
+    <%# <div class="detail-contents-top"> %>
+      <%# <h2 class="page-heading"> %>
+        <%# <%= "#{@user.nickname}さんの投稿一覧"%>
+      <%# </h2> %>
+    <%# </div> %>
+    <%# <div class="detail-contents"> %>
       <%# <% @topics.each do |topic| %>
         <%# <%= render partial: "user_topic", locals: { topic: topic } %>
       <%# <% end %>
-    </div>
-  </div>
+    <%# </div> %>
+  <%# </div> %>
 </div>
 
 <%= render "shared/footer" %>
