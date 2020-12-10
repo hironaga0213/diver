@@ -27,8 +27,19 @@
   width: 75%;
 }
 
+.main-page-show {
+  height: 100%;
+  width: 100%;
+}
+
 .main-header {
   height: 15vh;
+  width: 100%;
+  background:rgba(255,255,255,0);
+}
+
+.main-margin {
+  height: 5vh;
   width: 100%;
   background:rgba(255,255,255,0);
 }
@@ -54,4 +65,52 @@
 .detail-contents {
   height: calc(100% - 100px);
   width: 100%;
+}
+
+.wrapper-top {
+  height: 100%;
+  width: 100%;
+
+}
+
+.top-main {
+  height: 85%;
+  width: 100%;
+  // background:rgba(255,255,255,0.5);
+  overflow: scroll;
+}
+
+.column {
+  height: 50%;
+  background:rgba(255,255,255,0.5);
+  display: flex;
+  margin-bottom: 15vh;
+}
+
+.image-box {
+  width: 50%;
+  text-align: center;
+}
+
+.top-image {
+  height: 100%;
+  width: 100%;
+}
+
+.text-box {
+  padding-top: 20px;
+  height: 80%;
+  width: 50%;
+}
+
+.heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 36px;
+}
+
+.text-contents {
+  color: black;
+  font-size: 24px;
 }

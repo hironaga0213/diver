@@ -1,10 +1,10 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:edit, :show, :update, :destroy]
-  #before_action :move_to_index, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @topics = Topic.includes(:user).order("created_at DESC")
-    #@likes_count = Like.where(topic_id: @topics.id).count
+    @recommend = Topic.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
   end
 
   def new

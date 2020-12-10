@@ -18,4 +18,5 @@ class User < ApplicationRecord
   has_many :messages
   has_many :likes, dependent: :destroy
   has_many :topics, dependent: :destroy
+  has_many :liked_topics, through: :likes, source: :topic
 end

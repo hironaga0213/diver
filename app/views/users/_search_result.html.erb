@@ -1,43 +1,42 @@
-      <h1>
-        検索結果
-      </h1>
-      <%# 検索結果の個数で条件分岐 %>
-      <% if @results.present? %>
-        <% @results.each do |result| %>
-          <% if current_user.id != result.user.id %>
-            <div class="card">
-            <%#= link_to image_tag(topic.image, class: :card__img ), topic_path(topic.id), method: :get %>
-              <div class="card__body">
-                <p class="card__summary-2">
-                  <%= "ニックネーム：" %>
-                  <%= link_to result.user.nickname, "#", method: :get, class: :card__title%>
-                </p>
-
-                <p class="card__summary">
-                  <%= "ライセンス：#{result.license.name}" %>
-                </p>
-                <p class="card__summary">
-                  <%= "経験本数：#{result.career.name}" %>
-                </p>
-                <p class="card__summary">
-                  <%= "居住地：#{result.prefecture.name}" %>
-                </p>
-                <p class="card__summary">
-                  <%= "自己紹介：#{result.introduction}" %>
-                </p>
-              </div>
-            </div>
-          <% end %>
-
-          <%# <li>
-            <%= result.user.nickname %>
-            <%# <%= result.license.name %>
-            <%# <%= result.career.name %>
-            <%# <%= result.prefecture.name %>
-          <%# </li> %>
-        <% end %>
-      <% else %>
-        <%= "該当するユーザーはいません" %>
-      <% end %>
-      <br>
-      <%= link_to 'ユーザー一覧へ戻る', users_path %>
+<div class="search-title2">
+  <h2 class="search-user-result">
+    検索結果
+  </h2>
+</div>
+<%# 検索結果の個数で条件分岐 %>
+<% if @results.present? %>
+  <% @results.each do |result| %>
+    <% if current_user.id != result.user.id %>
+      <div class="card">
+      <%#= link_to image_tag(topic.image, class: :card__img ), topic_path(topic.id), method: :get %>
+        <div class="card__body">
+          <p class="card__summary-2">
+            <%= "ニックネーム：" %>
+            <%= link_to result.user.nickname, "#", method: :get, class: :card__title%>
+          </p>
+          <p class="card__summary">
+            <%= "ライセンス：#{result.license.name}" %>
+          </p>
+          <p class="card__summary">
+            <%= "お住まい　：#{result.prefecture.name}" %>
+          </p>
+          <p class="card__summary">
+            <%= "ビーチorボート：#{result.favorite_diving.name}" %>
+          </p>
+          <p class="card__summary">
+            <%= "好きな海洋生物：#{result.favorite_fish.name}" %>
+          </p>
+          <p class="card__summary">
+            <%= "好きなスポット：#{result.favorite_place.name}" %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= "該当するユーザーはいません" %>
+<% end %>
+<br>
+<div class="return_index">
+<%= link_to 'ユーザー一覧へ戻る', users_path %>
+</div>

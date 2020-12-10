@@ -1,37 +1,33 @@
-<h1>
-  商品検索
-</h1>
-<%= search_form_for @p, url: search_users_path do |f| %>
-  <%= f.label :license_id_eq, 'ライセンス：' %>
-  <%= f.collection_select :license_id_eq, License.where.not(id: 1), :id, :name,  include_blank: '指定なし' %>
-  <br>
-  <%= f.label :career_id_eq, '経験本数　：' %>
-  <%= f.collection_select :career_id_eq, Career.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :prefecture_id_eq, 'お住まい　　：' %>
-  <%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :holiday_id_eq, '休日　　：' %>
-  <%= f.collection_select :holiday_id_eq, Holiday.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :marriage_id_eq, '結婚　　：' %>
-  <%= f.collection_select :marriage_id_eq, Marriage.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :favorite_diving_id_eq, 'ビーチorボート？　　：' %>
-  <%= f.collection_select :favorite_diving_id_eq, FavoriteDiving.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :favorite_fish_id_eq, '好きな海洋生物　　：' %>
-  <%= f.collection_select :favorite_fish_id_eq, FavoriteFish.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :favorite_place_id_eq, 'おすすめのスポット　　：' %>
-  <%= f.collection_select :favorite_place_id_eq, FavoritePlace.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.label :favorite_sea_id_eq, '好きな海　　：' %>
-  <%= f.collection_select :favorite_sea_id_eq, FavoriteSea.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
-  <br>
-  <%= f.submit '検索' %>
-  <br>
 
-<% end %>
+  <div class="search-title">
+    <h2 class="search-user">
+      ユーザー検索
+    </h2>
+  </div>
+  <%= search_form_for @p, url: search_users_path do |f| %>
+    <%= f.label :license_id_eq, 'ライセンス：' %>
+    <%= f.collection_select :license_id_eq, License.where.not(id: 1), :id, :name,  include_blank: '指定なし' %>
+    <%= f.label :career_id_eq, '　　経験本数：' %>
+    <%= f.collection_select :career_id_eq, Career.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :prefecture_id_eq, 'お住まい：' %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <%= f.label :holiday_id_eq, '　　休日：' %>
+    <%= f.collection_select :holiday_id_eq, Holiday.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <%= f.label :marriage_id_eq, '　　結婚：' %>
+    <%= f.collection_select :marriage_id_eq, Marriage.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :favorite_diving_id_eq, 'ビーチｏｒボート？：' %>
+    <%= f.collection_select :favorite_diving_id_eq, FavoriteDiving.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <%= f.label :favorite_fish_id_eq, '　　好きな海洋生物：' %>
+    <%= f.collection_select :favorite_fish_id_eq, FavoriteFish.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.label :favorite_place_id_eq, 'おすすめのスポット：' %>
+    <%= f.collection_select :favorite_place_id_eq, FavoritePlace.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <%= f.label :favorite_sea_id_eq, '　　好きな海：' %>
+    <%= f.collection_select :favorite_sea_id_eq, FavoriteSea.where.not(id: 1), :id, :name, include_blank: '指定なし'%>
+    <br>
+    <%= f.submit '検索' %>
+    <br>
 
-        <%#= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  <% end %>

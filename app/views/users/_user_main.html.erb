@@ -7,22 +7,12 @@
           <%= "ニックネーム：" %>
           <%= link_to user.nickname, user_path(user.id), method: :get, class: :card__title%>
         </p>
-
         <p class="card__summary">
           <%= "ライセンス：#{user.profile.license.name}" %>
         </p>
-        <%# <p class="card__summary">
-          <%= "経験本数　：#{user.profile.career.name}" %>
-        <%# </p> %>
         <p class="card__summary">
           <%= "お住まい　：#{user.profile.prefecture.name}" %>
         </p>
-        <%# <p class="card__summary">
-          <%= "休日　　　：#{user.profile.holiday.name}" %>
-        <%# </p> %>
-        <%# <p class="card__summary">
-          <%= "結婚　　　：#{user.profile.marriage.name}" %>
-        <%# </p> %>
         <p class="card__summary">
           <%= "ビーチorボート：#{user.profile.favorite_diving.name}" %>
         </p>
@@ -32,14 +22,6 @@
         <p class="card__summary">
           <%= "好きなスポット：#{user.profile.favorite_place.name}" %>
         </p>
-        <%# <p class="card__summary">
-          <%= "どんな海が好き？：#{user.profile.favorite_sea.name}" %>
-        <%# </p> %>
-
-        <%# <p class="card__summary">
-          <%= "自己紹介：#{user.profile.introduction}" %>
-        <%# </p> %>
-
       </div>
     </div>
   <% end %>

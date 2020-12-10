@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit]
   before_action :search_user, only: [:index, :search]
-  
+  before_action :recommend_user, only: [:index, :search]
 
   def index
     @users = User.all
@@ -36,7 +36,6 @@ class UsersController < ApplicationController
   def recommend_user
     all_user = Profile.where.not(user_id: current_user.id)
     i = Profile.find_by(user_id: current_user.id)
-
     @recommend = []
     all_user.each do |someone|
       count = 0

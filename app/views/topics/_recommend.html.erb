@@ -1,0 +1,19 @@
+<div class="card_topic">
+  <%= link_to image_tag(recommend.image, class: :card__img__topic ), topic_path(recommend.id), method: :get %>
+  <div class="card__topic__body">
+    <%= link_to "タイトル：#{recommend.title}", topic_path(recommend.id), method: :get, class: :card__title%>
+    <p class="card__summary">
+      <%= "場所：#{recommend.place}" %>
+    </p>
+    <p class="card__summary">
+      <%= recommend.impression %>
+    </p>
+    <%= link_to "by #{recommend.user.nickname}", user_path(recommend.user.id), class: :card__user %>
+    <div id="index_like_<%= recommend.id %>">
+      <%= render 'likes/like', topic: recommend %>
+    </div>
+    <p class="good_count">
+      <%= "いいねの数　：#{Like.where(topic_id: recommend.id).count}" %>
+    </p>
+  </div>
+</div>
