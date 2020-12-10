@@ -1,9 +1,69 @@
 <%= render "shared/header" %>
 
 <div class="wrapper">
-  <%= render "shared/side_bar" %>
-  <%= render "main_page" %>
-  <%= render "detail_page" %>
+  <div class="wrapper-top">
+    <div class="main-header">
+    </div>
+    <div class="top-main">
+      <div class="main-margin">
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <%= image_tag "column1.jpeg", class: "top-image"%>
+        </div>
+        <div class="text-box">
+          <p class="heading">DIVERの目的</p>
+          <p class="text-contents">本アプリは、ダイバーもしくはダイビングに興味のある方々をつなげるアプリケーションです。</p>
+        </div>
+      </div>
+      <div class="main-margin">
+      </div>
+      <div class="column">
+        <div class="text-box">
+          <p class="heading">①ユーザー登録してみよう！</p>
+          <p class="text-contents">まずは、ユーザーを登録しましょう！<br>プロフィール登録も忘れずに！</p>
+        </div>
+        <div class="image-box">
+          <%= image_tag "column2.jpeg", class: "top-image"%>
+        </div>
+      </div>
+      <div class="main-margin">
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <%= image_tag "column3.jpeg", class: "top-image"%>
+        </div>
+        <div class="text-box">
+          <p class="heading">②お気に入りのユーザーを見つけよう！</p>
+          <p class="text-contents">お気に入りのユーザーを見つけましょう！<br>好みのプロフィールで検索できます！<br>困ったときはおすすめを見てみましょう！</p>
+        </div>
+      </div>
+      <div class="main-margin">
+      </div>
+      <div class="column">
+        <div class="text-box">
+          <p class="heading">③メッセージを送ろう！</p>
+          <p class="text-contents">お気に入りのユーザーにメッセージを送りましょう！</p>
+        </div>
+        <div class="image-box">
+          <%= image_tag "column4.jpeg", class: "top-image"%>
+        </div>
+      </div>
+      <div class="main-margin">
+      </div>
+      <div class="column">
+        <div class="image-box">
+          <%= image_tag "column5.jpeg", class: "top-image"%>
+        </div>
+        <div class="text-box">
+          <p class="heading">④写真を投稿してみよう！</p>
+          <p class="text-contents">投稿ページで写真を投稿してみましょう！<br>写真が良ければ相手からも連絡が来るかも！？<br>気に入った写真があったら「いいね！」をしてみましょう！</p>
+        </div>
+      </div>
+      <div class="main-margin">
+      </div>
+    </div>
+  </div>
 </div>
 
 <%= render "shared/footer" %>

@@ -24,7 +24,7 @@
     <div class="search-box">
       <%= render "search_user" %>
     </div>
-    <div class="topics-main">
+    <div class="users-main">
       <% @users.each do |user| %>
         <%= render partial: "user_main", locals: { user: user} %>
       <% end %>
