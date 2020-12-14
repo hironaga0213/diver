@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:edit, :show, :update, :destroy]
+  before_action :set_topic, only: [:show, :update, :destroy]
   before_action :move_to_index, except: [:index, :show]
 
   def index
@@ -26,8 +26,8 @@ class TopicsController < ApplicationController
     topic.destroy
   end
 
-  def edit
-  end
+  # def edit
+  # end
 
   def update
     @topic.update(topic_params)
@@ -40,8 +40,6 @@ class TopicsController < ApplicationController
   end
 
   def show
-    #@comment = Comment.new
-    #@comments = @tweet.comments.includes(:user)
   end
 
   def destroy
@@ -50,7 +48,6 @@ class TopicsController < ApplicationController
   end
 
   def search
-    #@topic = Topic.search(params[:keyword])
   end
 
   private
