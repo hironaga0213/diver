@@ -2,32 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.wrapper {
-  display: flex;
-}
-
-.header-name a{
-  font-size: 16px;
-  color: #FAFAFA;
-  text-decoration: none;
-}
-
-.create-room {
-  font-size: 10px;
-  color: deepskyblue;
-}
-.create-room a{
-  border: 1px solid lightblue;
-  padding: 14px;
-  color: deepskyblue;
-  text-decoration: none;
-}
-
-.chat {
-  width: calc(100vw - 300px);
-  background-color: #ffffff;
-}
-
+// メッセージ一覧の実装
 .chat-header {
   height: 100px;
   padding: 0 40px;
@@ -43,6 +18,7 @@
   color: #333;
   margin-top: 36px;
 }
+
 .header-button {
   margin-top: 40px;
 }
@@ -130,3 +106,28 @@
 .hidden {
   display: none;
 }
+// メッセージ一覧の実装
+
+// その他
+.header-name a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-room {
+  font-size: 10px;
+  color: deepskyblue;
+}
+.create-room a{
+  border: 1px solid lightblue;
+  padding: 14px;
+  color: deepskyblue;
+  text-decoration: none;
+}
+
+.chat {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+// その他
