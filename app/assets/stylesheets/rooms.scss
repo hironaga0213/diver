@@ -2,6 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ルーム一覧ページの実装
+.side-main-room {
+  height: 85%;
+  width: 100%;
+  background:rgba(255,255,255,0.5);
+}
+
+.side-bar-room-title {
+  height: 8vh;
+  width: 100%;
+  padding-top: 20px;
+ }
+
+ .side-bar-room-title a {
+  text-decoration: none;
+ }
+
+// .create-room-btn {
+//   margin-top: 10px;
+// }
+
+ .title-char-create-room {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  background-image:         linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  background-color: red;
+  color: white;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.title-char-room-index {
+  text-align: center;
+  margin: 0 auto;
+  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  background-image:         linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  background-color: blue;
+  color: white;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.rooms {
+  height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.room {
+  padding: 20px 0;
+  margin-bottom: 10px;
+  height: 10%;
+  display: block;
+  text-align: center;
+  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 100%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  background-color: green;
+
+}
+.room-name a {
+  color: white;
+  text-decoration: none;
+}
+// ルーム一覧ページの実装
+
+// ルーム作成ページの実装
 .chat-room-form {
   width: 980px;
   margin: 60px auto;
@@ -57,39 +125,41 @@
   float: right;
   width: 70%;
 }
+// ルーム作成ページの実装
 
-.chat-room-user {
-  padding: 0 15px;
-  line-height: 50px;
-  font-size: 14px;
-  border-bottom: 1px solid #ddd;
-  width: 500px;
-  margin: 0 auto;
-}
-.chat-room-user:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-.chat-room-user__name {
-  float: left;
-}
-.chat-room-user__btn {
-  float: right;
-  display: inline-block;
-  cursor: pointer;
-}
-.chat-room-user__btn--add {
-  color: #38aef0;
-}
-.chat-room-user__btn--remove {
-  color: #f05050;
-}
+// その他
+// .chat-room-user {
+//   padding: 0 15px;
+//   line-height: 50px;
+//   font-size: 14px;
+//   border-bottom: 1px solid #ddd;
+//   width: 500px;
+//   margin: 0 auto;
+// }
+// .chat-room-user:after {
+//   content: "";
+//   clear: both;
+//   display: block;
+// }
+// .chat-room-user__name {
+//   float: left;
+// }
+// .chat-room-user__btn {
+//   float: right;
+//   display: inline-block;
+//   cursor: pointer;
+// }
+// .chat-room-user__btn--add {
+//   color: #38aef0;
+// }
+// .chat-room-user__btn--remove {
+//   color: #f05050;
+// }
 
-.chat-room-user__name a {
-  text-decoration: none;
-  color: #38aef0;
-}
+// .chat-room-user__name a {
+//   text-decoration: none;
+//   color: #38aef0;
+// }
 
 .select__user {
   width: 500px;
@@ -105,73 +175,4 @@
 .field_with_errors {
   display: contents;
 }
-
-.side-main-room {
-  height: 85%;
-  width: 100%;
-  background:rgba(255,255,255,0.5);
-}
-
-.rooms {
-  height: calc(100vh - 100px);
-  padding: 0 20px;
-  overflow: scroll;
-}
-.room {
-  padding: 20px 0;
-  margin-bottom: 10px;
-  height: 10%;
-  display: block;
-  text-align: center;
-  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 100%,transparent 50%,rgba(0,0,0,.1) 100%);
-  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
-  background-color: green;
-
-}
-.room-name a {
-  color: white;
-  text-decoration: none;
-}
-
-.side-bar-room-title {
-  height: 8vh;
-  width: 100%;
-  padding-top: 20px;
- }
-
- .side-bar-room-title a {
-  text-decoration: none;
- }
-
- .title-char-create-room {
-  width: 40%;
-  text-align: center;
-  margin: 0 auto;
-  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
-  background-image:         linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
-  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
-  background-color: red;
-  color: white;
-  border: 1px solid rgba(0,0,0,.2);
-}
-
-.title-char-room-index {
-  text-align: center;
-  margin: 0 auto;
-  background-image: -webkit-linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
-  background-image:         linear-gradient(transparent 0%,rgba(255,255,255,.3) 50%,transparent 50%,rgba(0,0,0,.1) 100%);
-  box-shadow: 0 2px 2px 0 rgba(255,255,255,.2) inset,0 2px 10px 0 rgba(255,255,255,.5) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
-  background-color: blue;
-  color: white;
-  border: 1px solid rgba(0,0,0,.2);
-}
-// .create-room-btn {
-//   margin-top: 10px;
-// }
-// .side-bar-main {
-//   height: 80%;
-//   width: 100%;
-//   padding-top: 20px;
-//   padding-left: 20px;
-//   overflow: scroll;
-// }
+// その他

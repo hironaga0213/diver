@@ -2,36 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.topics-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  height: 75%;
-  width: 100%;
-  overflow: scroll;
-}
-
-.side-bar-topic {
-  height: 100%;
-  width: 25%;
-}
-
-// おすすめのページ
+// メインページ
 .side-main-back {
   height: 85%;
   width: 100%;
   background:rgba(0,255,255,0.5);
   padding-top: 20px;
-}
-// おすすめのページ
-
-.side-bar-title {
-  height: 10vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .title-char {
@@ -53,7 +29,15 @@
   border: double 5px #4ec4d3;
 }
 
-
+.topics-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+  overflow: scroll;
+}
 
 // 投稿物の表示
 .side-bar-main {
@@ -86,6 +70,11 @@
 }
 
 // 投稿物の詳細表示
+.main-page-show {
+  height: 100%;
+  width: 100%;
+}
+
 .topics-main-show {
   display: flex;
   flex-wrap: wrap;
@@ -133,3 +122,4 @@
   text-decoration: none;
   color: white;
 }
+
