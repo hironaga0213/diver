@@ -1,0 +1,102 @@
+<div class="background-image">
+<%= form_with(model: @profile, class: 'registration-main', local: true) do |f| %>
+<div class='form-wrap'>
+  <div class='form-header-logo'>
+    <%= link_to image_tag("diver_logo.png", class:"diver-icon"), "/" %>
+  </div>
+  <div class='form-header'>
+    <h1 class='form-header-text'>
+      プロフィール入力
+    </h1>
+  </div>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="form-group-text">
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ライセンス</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:license_id, License.all, :id, :name, {}, {class:"select-box", id:"profile-license"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">経験本数</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:career_id, Career.all, :id, :name, {}, {class:"select-box", id:"profile-career"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お住まいの地域</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"profile-prefecture"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">お休みの日</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:holiday_id, Holiday.all, :id, :name, {}, {class:"select-box", id:"profile-holiday"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ご結婚</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:marriage_id, Marriage.all, :id, :name, {}, {class:"select-box", id:"profile-marriage"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">ビーチ派 or ボート派？</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:favorite_diving_id, FavoriteDiving.all, :id, :name, {}, {class:"select-box", id:"profile-favorite-diving"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">好きな海洋生物</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:favorite_fish_id, FavoriteFish.all, :id, :name, {}, {class:"select-box", id:"profile-favorite-fish"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">よく行くダイビングスポット</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:favorite_place_id, FavoritePlace.all, :id, :name, {}, {class:"select-box", id:"profile-favorite-place"}) %>
+  </div>
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">どんな海がお好きですか？</label>
+      <span class="optional">任意</span>
+    </div>
+    <%= f.collection_select(:favorite_sea_id, FavoriteSea.all, :id, :name, {}, {class:"select-box", id:"profile-favorite-sea"}) %>
+  </div>
+  <div class="form-group">
+    <div class="items-explain">
+      <div class="weight-bold-text">
+        自己紹介文
+        <span class="optional">任意</span>
+      </div>
+      <%= f.text_area :introduction, class:"input-profile", id:"profile-info", placeholder:"自己紹介（必須 1,000文字まで）例）ダイビングを始めて3年目になります。周りで一緒に潜る人がいないので友達を作りにきました。よろしくお願いします。" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+  </div>
+  <div class="form-group">
+  </div>
+  <div class='register-btn'>
+    <%= f.submit "更新する" ,class:"register-red-btn" %>
+  </div>
+  <div class='back-user-btn'>
+    <%=link_to 'もどる', user_path, class:"register-back-btn" %>
+  </div>
+</div>
+<% end %>
+
+
+
+<%# <%= render "shared/second-footer"%> %>

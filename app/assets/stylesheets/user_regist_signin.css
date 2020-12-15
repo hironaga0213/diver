@@ -154,6 +154,23 @@
   cursor: pointer;
 }
 
+.back-user-btn {
+  width: 30%;
+  margin: 10px auto;
+  text-align: center;
+  background: gray;
+  border: 1px solid gray;
+}
+
+.register-back-btn {
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .register-info {
   margin: 30px 180px 0 0;
   color: #0099e8;
