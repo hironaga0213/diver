@@ -2,18 +2,22 @@
 
 <div class="wrapper">
   <%= render "shared/side_bar" %>
-  <%#= render "topic_main" %>
   <div class="main-page">
     <div class="main-header">
     </div>
-    <div class="main-contents">
-      <div class="form__wrapper">
-        <h2 class="page-heading">新規投稿</h2>
-        <%# 部分テンプレートでフォームを表示する %>
-        <%= render partial:"form", locals: { topic: @topic } %>
+    <div class="topics-main">
+      <div class="topics-main-edit">
+        <div class="items-sell-contents">
+          <div class="items-sell-main">
+            <h2 class="items-sell-title">新規投稿</h2>
+            <%# 部分テンプレートでフォームを表示する %>
+            <%= render partial:"form", locals: { topic: @topic } %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <%= render "tops/detail_page" %>
   <%#= render "topic_show" %>
 </div>
 

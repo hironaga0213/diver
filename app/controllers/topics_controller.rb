@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :update, :destroy]
+  before_action :set_topic, only: [:show, :update, :edit, :destroy]
   before_action :move_to_index, except: [:index, :show]
 
   def index
@@ -21,29 +21,24 @@ class TopicsController < ApplicationController
     end
   end
 
-  def destroy
-    topic = Topic.find(params[:id])
-    topic.destroy
+  def show
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
   def update
     @topic.update(topic_params)
     if @topic.save
-      binding.pry
       redirect_to topic_path
     else
       render :edit
     end
   end
 
-  def show
-  end
-
   def destroy
-    @topic.destroy
+    topic = Topic.find(params[:id])
+    topic.destroy
     redirect_to action: :index
   end
 
