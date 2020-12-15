@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   root to: 'tops#index'
   resources :tops, only: :index
   resources :users, only: [:index, :show, :edit] do
-    resources :profile, only: [:edit, :update]
     collection do
       get 'search'
     end
   end
+  resources :profiles, only: [:edit, :update]
   resources :rooms, only: [:index, :new, :create, :destroy] do
     resources :messages, only: [:index, :create]
   end
