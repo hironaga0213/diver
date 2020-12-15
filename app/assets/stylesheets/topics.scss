@@ -6,7 +6,8 @@
 .side-main-back {
   height: 85%;
   width: 100%;
-  background:rgba(0,255,255,0.5);
+  // background:rgba(0,255,255,0.2);
+  border: double 5px #00ff7f;
   padding-top: 20px;
 }
 
@@ -123,3 +124,84 @@
   color: white;
 }
 
+.edit-destroy {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-red-btn {
+  text-decoration: none;
+  text-align: center;
+  background-color: #ea352d;
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  background-image:         linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.1) inset,0 2px 10px 0 rgba(255,255,255,.2) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  border: 1px solid rgba(0,0,0,.2);
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+.item-destroy {
+  text-decoration: none;
+  background-color: lightgray;
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  background-image:         linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.1) inset,0 2px 10px 0 rgba(255,255,255,.2) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  border: 1px solid rgba(0,0,0,.2);
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
+
+// 投稿物の新規作成・編集
+.topics-main-edit {
+  width: 80%;
+  background:rgba(255,255,255,0.7);
+  padding: 20px;
+  margin-top: 20px;;
+}
+
+.items-sell-contents {
+  height: 100%;
+  width: 80%;
+ 
+}
+
+.items-sell-main {
+  // background:rgba(255,255,255,0.7);
+}
+
+.input_text {
+  width: 100%;
+  margin-top: 5px;
+  height: 45px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.input_impression {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding-top: 10px;
+  padding-left: 16px;
+}
+
+.back-btn {
+  text-decoration: none;
+  background-color: gray;
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  background-image:         linear-gradient(rgba(255,255,255,.3) 0%,transparent 50%,transparent 50%,rgba(0,0,0,.1) 100%);
+  box-shadow: 0 2px 2px 0 rgba(255,255,255,.1) inset,0 2px 10px 0 rgba(255,255,255,.2) inset,0 -2px 2px 0 rgba(0,0,0,.1) inset;
+  border: 1px solid rgba(0,0,0,.2);
+}
