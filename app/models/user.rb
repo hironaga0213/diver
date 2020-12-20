@@ -10,7 +10,7 @@ class User < ApplicationRecord
   end
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers', on: :registration
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers', on: :create
 
   has_one  :profile
   has_many :room_users
