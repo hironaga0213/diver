@@ -10,7 +10,7 @@
       <li class=><%= link_to "メッセージを送る", rooms_path, class: "item-index" %></li>
       <li class=><%= link_to "投稿を見る", topics_path, class: "item-index" %></li>
     </ul>
-    <ul class='page-lists'>
+    <ul class='user-page'>
       <% if user_signed_in? %>
         <li class=><%= link_to "マイページ", user_path(current_user.id), class: "user-nickname" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
