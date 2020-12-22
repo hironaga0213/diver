@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :update, :edit, :destroy]
   before_action :move_to_index, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @topics = Topic.includes(:user).order("created_at DESC")
