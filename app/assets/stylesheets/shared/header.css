@@ -39,6 +39,14 @@
   min-width: 200px;
 }
 
+.user-page {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+}
+
 .item-index {
   text-decoration: none;
   margin-right: 4vw;
